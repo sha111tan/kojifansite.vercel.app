@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+        <link rel="stylesheet" href="./styles.css">
+
+        <title>KojiFanSite</title>
+    </head>
+    <body class="body_hide">
+        <!--==================== HEADER ====================-->
+        <header class="header" id="header">
+            <nav class="nav container">
+                <a href="./index.html" class="nav__logo">
+                    <img src="./img/logo.png" alt="" class="nav__logo-img"> 
+                    KojiFanSite
+                </a>
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="./index.html" class="nav__link">Главная</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="./index.html#games" class="nav__link">Игры</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="./index.html#kojima" class="nav__link">Кодзима</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="./index.html#aboutus" class="nav__link">Авторы</a>
+                        </li>
+                    </ul>
+                    <div class="nav__close" id="nav-close">
+                        <i class='bx bx-x' ></i>
+                    </div>
+                </div>
+                <div class="nav__btns">                   
+                    <!-- кнопка бургер -->
+                    <div class="nav__toggle" id="nav-toggle">
+                        <i class='bx bx-grid-alt' ></i>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!--==================== MAIN ====================-->
+        <main class="games__main">
+            <!--==================== ИГРЫ ====================-->
+            <section class="aboutus section__games container" id="aboutus">
+                <h2 class="section__games__title">Игры от Хидео Кодзимы</h2>
+                <div class="aboutus__container grid">
+                    <a href="./games/ds.html" class="games__card">
+                        <img src="./img/01.jpg" alt="" class="gamess__img">
+                        <h3 class="aboutus__price">Death Stranding</h3>
+                    </a>
+                    <a href="./games/ds2.html" class="games__card">
+                        <img src="./img/02.jpg" alt="" class="gamess__img">
+                        <h3 class="aboutus__price">DS 2</h3>
+                    </a>
+                    <a href="./games/sh.html" class="games__card">
+                        <img src="./img/03.jpg" alt="" class="gamess__img">
+                        <h3 class="aboutus__price">Silent Hills</h3>
+                    </a>
+                    <a href="./games/mgstp.html" class="games__card">
+                        <img src="./img/04.jpg" alt="" class="gamess__img">
+                        <h3 class="aboutus__price">Metal Gear Solid V: The Phantom Pain</h3>
+                    </a>
+                    <a href="./games/mgsgz.html" class="games__card">
+                        <img src="./img/05.jpg" alt="" class="gamess__img">
+                        <h3 class="aboutus__price">Metal Gear Solid V: Ground Zeroes</h3>
+                    </a>
+                    <a href="./games/mgr.html" class="games__card">
+                        <img src="./img/06.jpg" alt="" class="gamess__img">
+                        <h3 class="aboutus__price">Metal Gear Rising: Revengeance</h3>
+                    </a>
+                    <a href="./games/mgs4.html" class="games__card">
+                        <img src="./img/07.jpg" alt="" class="gamess__img">
+                        <h3 class="aboutus__price">Metal Gear Solid 4</h3>
+                    </a>
+                    <a href="./games/mgs3.html" class="games__card">
+                        <img src="./img/09.jpg" alt="" class="gamess__img">
+                        <h3 class="aboutus__price">Metal Gear Solid 3</h3>
+                    </a>
+                    <a href="./games/mgs2.html" class="games__card">
+                        <img src="./img/10.jpg" alt="" class="gamess__img">
+                        <h3 class="aboutus__price">Metal Gear Solid 2</h3>
+                    </a>
+                    <a href="./games/mgs.html" class="games__card">
+                        <img src="./img/11.jpg" alt="" class="gamess__img">
+                        <h3 class="aboutus__price">Metal Gear Solid</h3>
+                    </a>
+                    <a href="./games/mg2.html" class="games__card">
+                        <img src="./img/12.jpg" alt="" class="gamess__img">
+                        <h3 class="aboutus__price">Metal Gear 2</h3>
+                    </a>
+                    <a href="./games/mg.html" class="games__card">
+                        <img src="./img/13.jpg" alt="" class="gamess__img">
+                        <h3 class="aboutus__price">Metal Gear</h3>
+                    </a>
+                </div>
+            </section>
+        </main>
+        <!--==================== FOOTER ====================-->
+        <footer class="footer section">
+            <span class="footer__copy">@ Проект студентов из группы ИЭ-21 <br> Быков Владислав, Чирин Юрий и Москаленко Дмитрий</span>
+        </footer>
+        <!--=============== JS ===============-->
+        <script src="./scrollreveal.min.js"></script>
+        <script src="./main.js"></script>
+    </body>
+</html>
