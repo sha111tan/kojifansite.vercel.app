@@ -56,10 +56,10 @@ const sr = ScrollReveal({
     distance: '60px',
     duration: 1400,
     delay: 200,
-    reset: true
+    /*reset: true*/
 })
 
-sr.reveal(`.gamef__img,.aboutus__card, .aboutus__container,.section__games__title,.home__data,.home__description,.celebrate__description`,{interval: 100})
+sr.reveal(`.gamef__img,.aboutus__card, .aboutus__container,.section__games__title,.home__data,.home__description,.ff__description`,{interval: 100})
 sr.reveal(`.games__main`,{origin: 'left'})
 sr.reveal(`.textt`,{interval: 100})
 sr.reveal(`.games__container`,{origin: 'left'})
