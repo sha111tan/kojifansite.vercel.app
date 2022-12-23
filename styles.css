@@ -1,4 +1,4 @@
-/* Шрифты */
+/*=============== ШРИФТЫ ===============*/
 
             /* шрифт для логотипа */
 @font-face {
@@ -12,22 +12,19 @@
 	src: local('blackcrowthin'),
 	url(./fonts/Blackcrow-Thin.woff); 
 }
-/*=============== VARIABLES CSS ===============*/
+@font-face {
+	font-family: 'kojimalight'; 
+	src: local('kojimalight'),
+	url(./fonts/kojimalight.otf); 
+}
+/*=============== CSS-ПЕРЕМЕННЫЕ ===============*/
 :root {
   --header-height: 3.5rem;
-
-  /*========== Colors ==========*/
-  /*Color mode HSL(hue, saturation, lightness)*/
   --title-color: hsl(355, 4%, 15%);
   --text-color: hsl(355, 4%, 35%);
   --text-color-light: hsl(355, 4%, 55%);
   --body-color: #fff;
   --container-color: #fff;
-
-  /*========== Font and typography ==========*/
-  /*.5rem = 8px | 1rem = 16px ...*/
-  --body-font: 'Poppins', sans-serif;
-
   --biggest-font-size: 1.5rem;
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.25rem;
@@ -35,39 +32,19 @@
   --normal-font-size: .938rem;
   --small-font-size: .813rem;
   --smaller-font-size: .75rem;
-
-  /*========== Font weight ==========*/
   --font-medium: 500;
   --font-semi-bold: 600;
-
-  /*========== Margenes Bottom ==========*/
-  /*.5rem = 8px | 1rem = 16px ...*/
   --mb-0-25: .25rem;
   --mb-0-5: .5rem;
   --mb-1: 1rem;
   --mb-1-5: 1.5rem;
   --mb-2: 2rem;
   --mb-2-5: 2.5rem;
-
-  /*========== z index ==========*/
   --z-tooltip: 10;
   --z-fixed: 100;
 }
 
-/* Responsive typography */
-@media screen and (min-width: 968px) {
-  :root {
-    --biggest-font-size: 2.5rem;
-    --h1-font-size: 2.25rem;
-    --h2-font-size: 1.5rem;
-    --h3-font-size: 1.25rem;
-    --normal-font-size: 1rem;
-    --small-font-size: .875rem;
-    --smaller-font-size: .813rem;
-  }
-}
-
-/*=============== BASE ===============*/
+/*=============== ОСНОВА ===============*/
 * {
   box-sizing: border-box;
   padding: 0;
@@ -131,8 +108,6 @@ button {
 }
 
 
-
-/*=============== REUSABLE CSS CLASSES ===============*/
 .container {
   max-width: 968px;
   margin-left: var(--mb-1-5);
@@ -186,7 +161,7 @@ button {
   box-shadow: 0 4px 16px hsla(355, 25%, 15%, .1);
 }
 
-/*=============== NAV ===============*/
+/*=============== МЕНЮ ===============*/
 .nav {
   height: var(--header-height);
   display: flex;
@@ -292,8 +267,6 @@ button {
 }
 .active-link:before{
   color: #FFF;
-  
-
 }
 
 .nav__close {
@@ -304,22 +277,18 @@ button {
   cursor: pointer;
 }
 
-/* Show menu */
 .show-menu {
   top: 0;
 }
 
-/* Change background header */
 .scroll-header {
   box-shadow: 0 1px 4px hsla(0, 4%, 15%, .1);
 }
 
-/* Active link */
 .active-link {
   color: #FFF;
 }
 
-/*=============== HOME ===============*/
 .home__container {
   padding-top: 1.5rem;
   row-gap: 1.5rem;
@@ -345,13 +314,12 @@ button {
   column-gap: 3rem;
 }
 
-
 .home__data {
   text-align: center;
 }
 
 .home__title {
-  font-size: var(--biggest-font-size);
+  font-size: 40px;
   line-height: 140%;
   margin-bottom: var(--mb-0-5);
   color: rgba(0, 0, 0, 0.692);
@@ -405,33 +373,14 @@ button {
   transform: translateY(-.25rem);
 }
 
-/*=============== CELEBRATE ===============*/
-.celebrate__container {
-  row-gap: 1rem;
-  row-gap: 3rem;
-  box-shadow: 0 4px 16px hsla(355, 25%, 15%, .1);
-  padding: 5.5rem 1.5rem 2.5rem;
-  
-  background: linear-gradient(to right, #c9d6ff, #e2e2e2);
-  border-radius: 50px;
-}
+/*=============== ff ===============*/
 
-.celebrate__data {
-  text-align: center;
-}
-
-.celebrate__title {
-  color: rgb(255, 255, 255);
-  margin-bottom: var(--mb-1-5);
-}
-
-.celebrate__description {
+.ff__description {
   margin-bottom: var(--mb-2-5);
   color: rgba(0, 0, 0, 0.692);
-  
 }
 
-.celebrate__img {
+.ff__img {
   width: 280px;
   justify-self: center;
   animation: floating 3s ease-in-out infinite;
@@ -508,70 +457,6 @@ button {
   transform: translateY(-.25rem);
 }
 
-/*=============== NEW ===============*/
-.new__card {
-  position: relative;
-  width: 230px;
-  background-color: var(--container-color);
-  box-shadow: 0 4px 16px hsla(355, 25%, 15%, .1);
-  padding: 1rem 1rem 1.5rem;
-  border-radius: .75rem;
-  text-align: center;
-  margin-bottom: 4rem;
-  overflow: hidden;
-}
-
-.new__overlay {
-  width: 250px;
-  height: 250px;
-  background-color: var(--first-color);
-  border-radius: 50%;
-  position: absolute;
-  top: -5rem;
-  left: -.65rem;
-  z-index: 0;
-}
-
-.new__img {
-  position: relative;
-  width: 150px;
-  margin-bottom: var(--mb-2);
-  transition: .3s;
-}
-
-.new__price {
-  font-size: var(--h2-font-size);
-}
-
-.new__title {
-  font-weight: var(--font-medium);
-}
-
-.new__button {
-  display: flex;
-  padding: .5rem;
-  border-radius: .25rem .25rem .75rem .25rem;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-}
-
-.new__icon {
-  font-size: 1.25rem;
-}
-
-.new__card:hover .new__img {
-  transform: translateY(-.5rem);
-}
-
-.swiper-pagination-bullet {
-  background-color: var(--text-color);
-}
-
-.swiper-pagination-bullet-active {
-  background-color: var(--first-color);
-}
-
 /*=============== ИГРЫ ===============*/
 .games__container {
   row-gap: 3rem;
@@ -632,62 +517,17 @@ button {
   background: linear-gradient(to right, #eae8e7f1, #ffffff);
   border-radius: 100px;
 }
+.photo {
+  row-gap: 3rem;
+  box-shadow: 0 4px 16px hsla(355, 25%, 15%, .1);
+  padding: 3.5rem 6.5rem 3.5rem;
+  background: linear-gradient(to right, #eae8e7f1, #ffffff);
+  border-radius: 100px;
+}
 
 /*=============== FOOTER ===============*/
 .footer {
   overflow: hidden;
-}
-
-.footer__container {
-  position: relative;
-  row-gap: 2rem;
-  border-radius: 50px;
-}
-
-.footer__logo {
-  display: flex;
-  align-items: center;
-  column-gap: .25rem;
-  color: var(--title-color);
-  font-weight: var(--font-medium);
-}
-
-.footer__logo-img {
-  width: 1.5rem;
-}
-
-.footer__description {
-  font-size: var(--small-font-size);
-}
-
-.footer__logo, 
-.footer__title {
-  margin-bottom: var(--mb-1);
-}
-
-.footer__title {
-  font-size: var(--h3-font-size);
-}
-
-.footer__links, 
-.footer__aviables {
-  display: flex;
-  flex-direction: column;
-  row-gap: .75rem;
-}
-
-.footer__link {
-  color: var(--text-color);
-  transition: .3s;
-}
-
-.footer__link:hover {
-  color: var(--title-color);
-}
-
-.footer__aviable-img {
-  width: 100px;
-  cursor: pointer;
 }
 
 .footer__copy {
@@ -698,50 +538,7 @@ button {
   color: var(--text-color-light);
 }
 
-.footer__img1, 
-.footer__img2 {
-  position: absolute;
-  width: 100px;
-}
 
-.footer__img1 {
-  top: 25%;
-  right: 2rem;
-}
-
-.footer__img2 {
-  top: 75%;
-  right: -4rem;
-}
-
-/*=============== SCROLL UP ===============*/
-.scrollup {
-  position: fixed;
-  right: 1rem;
-  bottom: -30%;
-  background-color: var(--container-color);
-  box-shadow: 0 4px 12px hsla(0, 0%, 20%, .1);
-  display: inline-flex;
-  padding: .35rem;
-  border-radius: .25rem;
-  z-index: var(--z-tooltip);
-  opacity: .8;
-  transition: .4s;
-}
-
-.scrollup:hover {
-  opacity: 1;
-}
-
-.scrollup__icon {
-  font-size: 1.25rem;
-  color: var(--first-color);
-}
-
-/* Show Scroll Up*/
-.show-scroll {
-  bottom: 3rem;
-}
 
 /*=============== СКРОЛЛБАР ===============*/
 ::-webkit-scrollbar {
@@ -755,7 +552,7 @@ button {
   border-radius: 1rem;
 }
 
-/*=============== BREAKPOINTS ===============*/
+/*=============== РАЗРЕШЕНИЕ ЭКРАНА ===============*/
 @media screen and (max-width: 320px) {
   .container {
     margin-left: var(--mb-1);
@@ -791,7 +588,7 @@ button {
     box-shadow: 0 4px 16px hsla(355, 25%, 15%, .1);
     
   }
-  .celebrate__description {
+  .ff__description {
     padding: 0 4rem;
     
   }
@@ -807,9 +604,6 @@ button {
     width: 60%;
   }
 
-  .footer__container {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
 
 @media screen and (min-width: 767px) {
@@ -825,7 +619,37 @@ button {
   .section__games {
     padding: 7rem 0 2rem;
   }
-
+  .gamez__container {
+    row-gap: 3rem;
+    box-shadow: 0 4px 16px hsla(355, 25%, 15%, .1);
+    padding: 1.5rem 1.5rem 2.5rem;
+    background: linear-gradient(to right, #c9d6ff, #e2e2e2);
+    border-radius: 50px;
+    
+  }
+  .game__img {
+    width: 420px;
+    justify-self: center;
+    border-radius: 80px;
+    box-shadow: 0 1px 4px hsla(0, 4%, 15%, .1);
+    column-gap: 3rem;
+  }
+  .textt {
+    row-gap: 1rem;
+    box-shadow: 0 4px 16px hsla(355, 25%, 15%, .1);
+    padding: 1.5rem 2.5rem 1.5rem;
+    background: linear-gradient(to right, #eae8e7f1, #ffffff);
+    border-radius: 50px;
+    text-align:justify;
+    font-size: 10.5px;
+  }
+  .photo {
+    row-gap: 3rem;
+    box-shadow: 0 4px 16px hsla(355, 25%, 15%, .1);
+    padding: 1.5rem 2.5rem 1.5rem;
+    background: linear-gradient(to right, #eae8e7f1, #ffffff);
+    border-radius: 50px;
+  }
   .nav {
     height: calc(var(--header-height) + 1.5rem);
     column-gap: 3rem;
@@ -842,13 +666,12 @@ button {
     flex-direction: row;
     column-gap: 3rem;
   }
-  .dark-theme .nav__menu {
+  .nav__menu {
     box-shadow: none;
   }
 
   .home__container,
   .game__container,
-  .celebrate__container,
   .games__container {
     text-align: left;
     align-items: center;
@@ -858,14 +681,7 @@ button {
     justify-content: center;
     
   }
-  .gamez__container {
-    text-align: left;
-    align-items: center;
-    padding: 2rem 0;
-    grid-template-columns: repeat(2, max-content);
-    column-gap: 4rem;
-    justify-content: center;
-  }
+
   .home__container {
     padding-top: 8rem;
   }
@@ -884,11 +700,11 @@ button {
     column-gap: 5rem;
   }
 
-  .celebrate__data, 
-  .celebrate__title {
+  .ff__data, 
+  .ff__title {
     text-align: initial;
   }
-  .celebrate__description {
+  .ff__description {
     padding: 0;
     
   }
@@ -902,12 +718,39 @@ button {
     gap: 2.5rem;
   }
 
-  .footer__container {
-    grid-template-columns: repeat(3, 1fr);
-  }
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1445px) {
+  .div {
+    margin-left: 200px;
+
+  }
+  .textt {
+    row-gap: 1rem;
+    box-shadow: 0 4px 16px hsla(355, 25%, 15%, .1);
+    padding: 3.5rem 9.5rem 3.5rem;
+    background: linear-gradient(to right, #eae8e7f1, #ffffff);
+    border-radius: 100px;
+    text-align:justify;
+    font-size: 15.5px;
+    
+  }
+  .photo {
+    row-gap: 3rem;
+    box-shadow: 0 4px 16px hsla(355, 25%, 15%, .1);
+    padding: 3.5rem 9.5rem 3.5rem;
+    background: linear-gradient(to right, #eae8e7f1, #ffffff);
+    border-radius: 100px;
+  }
+  
+  .gamez__container {
+    row-gap: 3rem;
+    box-shadow: 0 4px 16px hsla(355, 25%, 15%, .1);
+    padding: 1.5rem 1.5rem 2.5rem;
+    background: linear-gradient(to right, #c9d6ff, #e2e2e2);
+    border-radius: 50px;
+    
+  }
   .container {
     margin-left: auto;
     margin-right: auto;
@@ -918,10 +761,12 @@ button {
   }
   .game__container {
     column-gap: 3rem;
+    padding-top: 6rem;
   }
   .home__img {
-    width: 500px;
+    width: 520px;
   }
+
   .game__img {
     width: 500px;
     box-shadow: 0 4px 16px hsla(355, 25%, 15%, .1);
@@ -944,15 +789,11 @@ button {
     width: 120px;
   }
 
-  .celebrate__img {
+  .ff__img {
     width: 250px;
   }
-  .celebrate__description {
+  .ff__description {
     padding-right: 1rem;
-    
-  }
-
-  .aboutus__container {
     
   }
   .aboutus__card {
@@ -975,16 +816,6 @@ button {
     font-size: var(--small-font-size);
   }
 
-  .new__container {
-    padding-top: 2rem;
-  }
-  .new__card {
-    margin-bottom: 5rem;
-  }
-  .new__price {
-    font-size: var(--h3-font-size);
-  }
-
   .games__container {
     padding: 2rem 0;
     grid-template-columns: repeat(2, max-content);
@@ -996,7 +827,7 @@ button {
     box-shadow: 0 4px 16px hsla(355, 25%, 15%, .1);
   }
   .gamez__container {
-    padding: 2rem 0 rem;
+    padding: 2rem 0rem;
     grid-template-columns: repeat(2, max-content);
     column-gap: 4rem;
     justify-content: center;
@@ -1023,29 +854,10 @@ button {
     width: 130px;
   }
 
-  .footer__container {
-    grid-template-columns: repeat(4, max-content);
-    justify-content: space-between;
-  }
   .footer__copy {
     margin-top: 0;
   }
-  .footer__img1, 
-  .footer__img2 {
-    width: 120px;
-  }
-  .footer__img1 {
-    top: 100%;
-    left: 0;
-  }
-  .footer__img2 {
-    top: 40%;
-    right: -7rem;
-  }
-  
-  .scrollup {
-    right: 3rem;
-  }
+ 
 }
 
 @keyframes floating {
@@ -1053,18 +865,98 @@ button {
   50%  { transform: translate(0, 15px); }
   100%   { transform: translate(0, -0px); }   
 }
-@media screen and (max-width:1600px) {
-  div {font-size: 10px;}
+
+@media screen and (max-width:766px) {
+  .textt {
+    row-gap: 1rem;
+    box-shadow: 0 4px 16px hsla(355, 25%, 15%, .1);
+    padding: 1.5rem 2.5rem 1.5rem;
+    background: linear-gradient(to right, #eae8e7f1, #ffffff);
+    border-radius: 50px;
+    text-align:justify;
+    font-size: 11.5px;
+  }
+  .photo {
+    row-gap: 3rem;
+    box-shadow: 0 4px 16px hsla(355, 25%, 15%, .1);
+    padding: 1.5rem 2.5rem 1.5rem;
+    background: linear-gradient(to right, #eae8e7f1, #ffffff);
+    border-radius: 50px;
+  }
+  .gamez__container {
+    row-gap: 3rem;
+    box-shadow: 0 4px 16px hsla(355, 25%, 15%, .1);
+    padding: 1.5rem 1.5rem 2.5rem;
+    background: linear-gradient(to right, #c9d6ff, #e2e2e2);
+    border-radius: 50px;
+    
+  }
+  .game__img {
+    width: 320px;
+    justify-self: center;
+    border-radius: 50px;
+    column-gap: 1rem;
+  }
+  .gamef__img {
+    width: 320px;
+    justify-self: center;
+    border-radius: 50px;
+    box-shadow: 0 1px 4px hsla(0, 4%, 15%, .1);
+    column-gap: 3rem;
+  }
+  .games__title {
+    font-size: 24px;
+  }
+  .button {
+    font-size: 12px;
+  }
+  .games__container {
+    row-gap: 1rem;
+    padding: 2.5rem 1.5rem 2.5rem; 
+  }
+  .game__container {
+    padding-top: 4rem;
+  }
+  .home__container {
+    padding-top: 5.5rem;
+    row-gap: 0.5rem;
+  }
+  .nav__logo-img {
+    width: 2rem;
+  }
+  .home__data {
+    padding-bottom: 1rem;
+  }
+  .home__title {
+    font-size: 25px;
+  }
+ .aboutus__price {
+  font-size: 15px;
+ }
+ .aboutus__title {
+  font-size: 10px;
+ }
+ .ff__description {
+  font-size: 12px;
+ }
+ .gamess__img {
+  width: 200px;
+ }
+.games__card {
+  padding: 1.5rem 1rem 1rem;
 }
-@media screen and (max-width:1024px) {
-  div {font-size: 8px;}
+.aboutus__container {
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
 }
-@media screen and (max-width:780px) {
-  div {font-size: 8px;}
+.section {
+  padding: 8rem 0 6rem;
 }
-@media screen and (max-width:360px) {
-  div {font-size: 7px;}
+.gamesection {
+  padding: 1.5rem 0 1rem
 }
+}
+
 .element-animation {
   margin: 2rem 0;
   font-size: 3rem;
