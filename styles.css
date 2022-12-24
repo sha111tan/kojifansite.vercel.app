@@ -109,7 +109,7 @@ button {
 
 
 .container {
-  max-width: 968px;
+  max-width: 1000px;
   margin-left: var(--mb-1-5);
   margin-right: var(--mb-1-5);
 }
@@ -197,7 +197,8 @@ button {
   
 }
 
-@media screen and (max-width: 767px) {
+
+@media screen and (max-width: 926px) {
   .nav__menu {
     position: fixed;
     background: linear-gradient(to right, #eae8e7, #ffffff);
@@ -292,6 +293,7 @@ button {
 .home__container {
   padding-top: 1.5rem;
   row-gap: 1.5rem;
+  max-width: 1550px; 
 }
 
 .home__img {
@@ -388,7 +390,7 @@ button {
 
 /*=============== АВТОРЫ ===============*/
 .aboutus__container {
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2fr, 1fr);
   gap: 1.5rem;
 }
 
@@ -421,7 +423,7 @@ button {
   box-shadow: 0 4px 16px hsla(355, 25%, 15%, .1);
 }
 .gamess__img {
-  width: 100px;
+  width: 1200px;
   justify-self: center;
   margin-bottom: var(--mb-0-25);
   transition: .3s;
@@ -463,14 +465,14 @@ button {
   box-shadow: 0 4px 16px hsla(355, 25%, 15%, .1);
   padding: 5.5rem 1.5rem 2.5rem;
   background: linear-gradient(to right, #eae8e7f1, #ffffff);
-  border-radius: 50px;
+  border-radius: 80px;
 }
 .gamez__container {
   row-gap: 3rem;
   box-shadow: 0 4px 16px hsla(355, 25%, 15%, .1);
-  padding: 5.5rem 1.5rem 2.5rem;
+  padding: 1.5rem 1.5rem 2.5rem;
   background: linear-gradient(to right, #c9d6ff, #e2e2e2);
-  border-radius: 50px;
+  border-radius: 80px;
 }
 
 .games__form {
@@ -511,11 +513,13 @@ button {
 }
 
 .textt {
+  max-width: 1500px;
   row-gap: 3rem;
   box-shadow: 0 4px 16px hsla(355, 25%, 15%, .1);
   padding: 3.5rem 6.5rem 3.5rem;
   background: linear-gradient(to right, #eae8e7f1, #ffffff);
   border-radius: 100px;
+  text-align:justify;
 }
 .photo {
   row-gap: 3rem;
@@ -592,9 +596,11 @@ button {
     padding: 0 4rem;
     
   }
-
+  .section {
+    padding: 8rem 0 6rem;
+  }
   .aboutus__container {
-    grid-template-columns: repeat(2, 180px);
+    grid-template-columns: 150px;
     justify-content: center;
     gap: 2rem;
   }
@@ -606,7 +612,7 @@ button {
 
 }
 
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 926px) {
   body {
     margin: 0;
   }
@@ -621,11 +627,16 @@ button {
   }
   .gamez__container {
     row-gap: 3rem;
+    justify-content: center;
     box-shadow: 0 4px 16px hsla(355, 25%, 15%, .1);
-    padding: 1.5rem 1.5rem 2.5rem;
+    padding: 1.5rem 2rem 2.5rem;
     background: linear-gradient(to right, #c9d6ff, #e2e2e2);
-    border-radius: 50px;
+    border-radius: 100px;
     
+  }
+  .container {
+    margin-left: auto;
+    margin-right: auto;
   }
   .game__img {
     width: 420px;
@@ -637,18 +648,23 @@ button {
   .textt {
     row-gap: 1rem;
     box-shadow: 0 4px 16px hsla(355, 25%, 15%, .1);
-    padding: 1.5rem 2.5rem 1.5rem;
+    padding: 3.5rem 8.5rem 3.5rem;
     background: linear-gradient(to right, #eae8e7f1, #ffffff);
-    border-radius: 50px;
+    border-radius: 100px;
     text-align:justify;
-    font-size: 10.5px;
+    font-size: 13.5px;
   }
   .photo {
     row-gap: 3rem;
     box-shadow: 0 4px 16px hsla(355, 25%, 15%, .1);
-    padding: 1.5rem 2.5rem 1.5rem;
+    padding: 3.5rem 5.5rem 3.5rem;
     background: linear-gradient(to right, #eae8e7f1, #ffffff);
-    border-radius: 50px;
+    border-radius: 100px;
+  }
+ 
+  .gamess__img {
+    width: 1200px;
+    margin-bottom: var(--mb-1);
   }
   .nav {
     height: calc(var(--header-height) + 1.5rem);
@@ -720,37 +736,36 @@ button {
 
 }
 
-@media screen and (min-width: 1445px) {
-  .div {
-    margin-left: 200px;
-
-  }
+@media screen and (min-width: 1550px) {
+  
   .textt {
     row-gap: 1rem;
     box-shadow: 0 4px 16px hsla(355, 25%, 15%, .1);
     padding: 3.5rem 9.5rem 3.5rem;
     background: linear-gradient(to right, #eae8e7f1, #ffffff);
-    border-radius: 100px;
+    border-radius: 80px;
     text-align:justify;
-    font-size: 15.5px;
+    font-size: 14.5px;
     
+  }
+  .gamez__container {
+    padding: 1.5rem 2rem 2.5rem;
+    row-gap: 3rem;
+    justify-content: center;
+    background: linear-gradient(to right, #c6d2fa, #e2e2e2);
+    border-radius: 100px;
+    box-shadow: 0 4px 16px hsla(355, 25%, 15%, .1);
   }
   .photo {
+    text-align:center;
+    justify-content: center;
     row-gap: 3rem;
     box-shadow: 0 4px 16px hsla(355, 25%, 15%, .1);
-    padding: 3.5rem 9.5rem 3.5rem;
+    padding: 3.5rem 5.5rem 3.5rem;
     background: linear-gradient(to right, #eae8e7f1, #ffffff);
-    border-radius: 100px;
+    border-radius: 80px;
   }
   
-  .gamez__container {
-    row-gap: 3rem;
-    box-shadow: 0 4px 16px hsla(355, 25%, 15%, .1);
-    padding: 1.5rem 1.5rem 2.5rem;
-    background: linear-gradient(to right, #c9d6ff, #e2e2e2);
-    border-radius: 50px;
-    
-  }
   .container {
     margin-left: auto;
     margin-right: auto;
@@ -817,29 +832,13 @@ button {
   }
 
   .games__container {
-    padding: 2rem 0;
-    grid-template-columns: repeat(2, max-content);
-    column-gap: 4rem;
+    grid-template-columns: repeat(2);
     justify-content: center;
     background: linear-gradient(to right, #eae8e7f1, #ffffff);
-    
-    border-radius: 100px;
-    box-shadow: 0 4px 16px hsla(355, 25%, 15%, .1);
-  }
-  .gamez__container {
-    padding: 2rem 0rem;
-    grid-template-columns: repeat(2, max-content);
-    column-gap: 4rem;
-    justify-content: center;
-    background: linear-gradient(to right, #c6d2fa, #e2e2e2);
-    
     border-radius: 100px;
     box-shadow: 0 4px 16px hsla(355, 25%, 15%, .1);
   }
 
-  .games__form {
-    text-align: initial;
-  }
   .games__title {
     font-size: var(--h1-font-size);
   }
@@ -905,7 +904,7 @@ button {
     column-gap: 3rem;
   }
   .games__title {
-    font-size: 24px;
+    font-size: 20px;
   }
   .button {
     font-size: 12px;
@@ -931,7 +930,7 @@ button {
     font-size: 25px;
   }
  .aboutus__price {
-  font-size: 15px;
+  font-size: 10px;
  }
  .aboutus__title {
   font-size: 10px;
@@ -946,7 +945,6 @@ button {
   padding: 1.5rem 1rem 1rem;
 }
 .aboutus__container {
-  grid-template-columns: repeat(1, 1fr);
   gap: 2rem;
 }
 .section {
