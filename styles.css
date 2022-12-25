@@ -297,7 +297,7 @@ button {
 }
 
 .home__img {
-  width: 320px;
+  width: 520px;
   justify-self: center;
   animation: floating 3s ease-in-out infinite;
 }
