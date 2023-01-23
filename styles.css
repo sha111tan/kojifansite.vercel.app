@@ -914,7 +914,13 @@ button {
   50%  { transform: translate(0, 15px); }
   100%   { transform: translate(0, -0px); }   
 }
-
+@media screen and (max-width:576px) {
+  .aboutus__container{
+    gap: 2rem;
+    grid-template-columns: repeat(1,130px);
+    justify-content: center;
+  }
+}
 @media screen and (max-width:766px) {
   .textt {
     row-gap: 1rem;
@@ -996,11 +1002,7 @@ button {
 .games__card {
   padding: 1.5rem 1rem 1rem;
 }
-.aboutus__container {
-  gap: 2rem;
-  grid-template-columns: repeat(3,130px);
-  justify-content: center;
-}
+
 .section {
   padding: 8rem 0 6rem;
 }
