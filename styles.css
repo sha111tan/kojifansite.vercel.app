@@ -533,7 +533,7 @@ button {
 }
 
 .games__button {
-  width: 100%;
+  width: initial;
   background: linear-gradient(to right, #232526, #414345);
   box-shadow: 4px 4px 12px rgba(22, 22, 22, 0.5), 
 		inset 10px 10px 10px rgba(115, 115, 115, 0.3);
@@ -642,14 +642,14 @@ button {
     padding: 8rem 0 6rem;
   }
   .aboutus__container {
-    grid-template-columns: 150px;
+    grid-template-columns: repeat(3,150px);
     justify-content: center;
     gap: 2rem;
   }
 
   .games__input,
   .games__button {
-    width: 60%;
+    width: initial;
   }
 
 }
@@ -722,7 +722,6 @@ button {
   }
   .nav {
     height: calc(var(--header-height) + 1.5rem);
-    
   }
   .nav__toggle, 
   .nav__close, 
@@ -750,7 +749,6 @@ button {
     grid-template-columns: repeat(2, max-content);
     column-gap: 4rem;
     justify-content: center;
-    
   }
 
   .home__container {
@@ -1000,6 +998,8 @@ button {
 }
 .aboutus__container {
   gap: 2rem;
+  grid-template-columns: repeat(3,130px);
+  justify-content: center;
 }
 .section {
   padding: 8rem 0 6rem;
