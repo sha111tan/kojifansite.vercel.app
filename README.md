@@ -8,4 +8,5 @@
 - CSS
 - JavaScript
 - ScrollReveal
+- Google Analytics
 
