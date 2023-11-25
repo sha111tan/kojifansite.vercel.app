@@ -1,6 +1,6 @@
 ## [kojifansite.vercel.app](https://kojifansite.vercel.app)
 # Адаптивный многостраничный веб-сайт, посвященный творчеству Хидео Кодзимы.
-![screenshot](https://github.com/kojifansite/DefectVision/blob/main/Снимок%20экрана%20(72).png)
+![screenshot](https://github.com/kojifansite/kojifansite.vercel.app/blob/main/Снимок%20экрана%20(89).png)
 ## 📝 Основной стек:
 - HTML, CSS и JavaScript: Основные технологии разработки сайта.
 - Google Analytics: Инструмент для сбора и анализа данных о посещаемости.
